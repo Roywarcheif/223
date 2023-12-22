@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>index</title>
+    <style>
+      @font-face {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 300;
+        src: local("Ubuntu Light"), local("Ubuntu-Light"),
+          url(fonts/4icv6kvjbnbylgoc1czjvwynl4u.woff2) format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "FontAwesome";
+        src: url("fonts/fontawesome-webfont.eot");
+        src: url("fonts/fontawesome-webfont.eot") format("embedded-opentype"),
+          url("fonts/fontawesome-webfont.woff2") format("woff2"),
+          url("fonts/fontawesome-webfont.woff") format("woff"),
+          url("fonts/fontawesome-webfont.ttf") format("truetype"),
+          url("fonts/fontawesome-webfont.svg") format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      html {
+        font-family: sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-size: 10px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+
+      a {
+        background-color: transparent;
+        color: #333;
+        text-decoration: none;
+      }
+
+      a:active,
+      a:hover {
+        outline: 0;
+      }
+
+      abbr[title] {
+        border-bottom: 1px dotted;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+
+      img {
+        border: 0;
+        vertical-align: middle;
+      }
+
+      svg:not(:root) {
+        overflow: hidden;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+        margin: 0;
+      }
+
+      a:hover,
+      a:focus {
+        color: #00b39e;
+        text-decoration: underline;
+      }
+
+      a:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+      }
+
+      .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      h3,
+      h4,
+      .h1 .h3,
+      .h4 {
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+      }
+
+      h3,
+      .h3 {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      h4,
+      .h4 {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin: 0 0 10px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      abbr[title],
+      abbr[data-original-title] {
+        cursor: help;
+        border-bottom: 1px dotted #777;
+      }
+
+      .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .container {
+          width: 997px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .container {
+          width: 99%;
+          max-width: 1440px;
+        }
+      }
+
+      .row {
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+
+      .col-sm-3,
+      .col-xs-6,
+      .col-sm-9,
+      .col-lg-10 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .col-xs-6 {
+        float: left;
+        width: 50%;
+      }
+
+      @media (min-width: 768px) {
+        .col-sm-3,
+        .col-sm-9 {
+          float: left;
+        }
+
+        .col-sm-9 {
+          width: 75%;
+        }
+
+        .col-sm-3 {
+          width: 25%;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .col-lg-10 {
+          float: left;
+          width: 83.33333333%;
+        }
+      }
+
+      .media {
+        margin-top: 15px;
+      }
+
+      .media:first-child {
+        margin-top: 0;
+      }
+
+      .media,
+      .media-body {
+        overflow: hidden;
+        zoom: 1;
+      }
+
+      .media-body {
+        width: 10000px;
+      }
+
+      .media-object {
+        display: block;
+      }
+
+      .media-left {
+        padding-right: 10px;
+      }
+
+      .media-left,
+      .media-body {
+        display: table-cell;
+        vertical-align: top;
+      }
+
+      .media-heading {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      .container:before,
+      .container:after,
+      .row:before,
+      .row:after {
+        display: table;
+        content: " ";
+      }
+
+      .container:after,
+      .row:after {
+        clear: both;
+      }
+
+      .visible-xs {
+        display: none !important;
+      }
+
+      .visible-xs-block {
+        display: none !important;
+      }
+
+      @media (max-width: 767px) {
+        .visible-xs {
+          display: block !important;
+        }
+
+        tr.visible-xs {
+          display: table-row !important;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .visible-xs-block {
+          display: block !important;
+        }
+      }
+
+      .fa {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .fa-angle-up:before {
+        content: "\f106";
+      }
+
+      body {
+        color: #333;
+        font-family: "Ubuntu", sans-serif;
+        width: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      a {
+        transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+      }
+
+      /*清除CSS经过特效*/
+      a:focus,
+      #scroll-up:focus {
+        outline: none;
+      }
+
+      /*回到顶部*/
+      #scroll-up {
+        -moz-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        background: none;
+        border-radius: 50%;
+        bottom: 20px;
+        box-shadow: 0 0 0 4px #00b39e;
+        color: transparent;
+        font-size: 0;
+        line-height: 0;
+        margin-right: 0 !important;
+        opacity: 1 !important;
+        padding: 3px 0 7px;
+        position: fixed;
+        right: 20px !important;
+        text-align: center;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        z-index: 999;
+      }
+
+      #scroll-up:before {
+        display: block;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        background: #00b39e;
+        border-radius: 50%;
+        content: "";
+        height: 100%;
+        left: -2px;
+        opacity: 1;
+        padding: 2px;
+        pointer-events: none;
+        position: absolute;
+        top: -2px;
+        transition: transform 0.2s, opacity 0.3s;
+        width: 100%;
+        z-index: -1;
+      }
+
+      #scroll-up:after {
+        -moz-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        color: #fff;
+        content: "\f077";
+        font: normal 30px/35px FontAwesome;
+        line-height: 30px;
+      }
+
+      #scroll-up:hover {
+        box-shadow: 0 0 0 4px #888;
+      }
+
+      #scroll-up:hover:before {
+        transform: scale(1.3);
+        opacity: 0;
+      }
+
+      #scroll-up:hover:after {
+        color: #888;
+      }
+
+      .col2-left-layout .col-main {
+        padding-left: 20px;
+      }
+
+      @media (max-width: 767px) {
+        body {
+          font-size: 14px;
+          padding-top: 44px;
+          padding-bottom: 46px;
+        }
+
+        body a:focus {
+          outline: thin dotted;
+          outline: 5px auto -webkit-focus-ring-color;
+          outline-offset: -2px;
+        }
+
+        body .col2-left-layout .col-main {
+          padding-left: 15px;
+        }
+
+        body .mobile-scroll-up {
+          border: 1px solid #eee;
+          margin-top: 15px;
+          display: block;
+          width: 100%;
+          padding: 10px 0;
+          text-align: center;
+          background: -moz-linear-gradient(top, #fff, #f3f3f3);
+          background: -webkit-linear-gradient(top, #fff, #f3f3f3);
+          background: -o-linear-gradient(top, #fff, #f3f3f3);
+          text-transform: uppercase;
+          font-weight: bold;
+          text-decoration: none;
+        }
+
+        body .mobile-scroll-up span {
+          color: #cdcdcd;
+          font-size: 30px;
+          line-height: 16px;
+        }
+
+        .cms-content {
+          clear: both;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .container {
+          width: 93%;
+          max-width: 1350px;
+        }
+      }
+
+      .cms-content img {
+        display: inline-block;
+        height: auto;
+        max-width: 100%;
+      }
+
+      .cms-content .media-object {
+        display: block;
+        max-width: inherit;
+      }
+
+      @media (max-width: 767px) {
+        .cms-content .media {
+          border-bottom: 1px dotted #ddd;
+          padding-bottom: 10px;
+        }
+
+        .cms-content .media-left {
+          clear: both;
+          width: 100%;
+          display: block;
+          padding-bottom: 10px;
+          text-align: center;
+        }
+
+        .cms-content .media-left img {
+          max-width: 100% !important;
+          margin: 0 auto;
+        }
+      }
+
+      .about-box-style-3 div {
+        text-align: center;
+      }
+
+      .about-box-style-3 div a {
+        display: block;
+        border: 1px solid #eee;
+        cursor: pointer;
+        overflow: hidden;
+        text-decoration: none;
+        position: relative;
+        margin: 0 auto;
+      }
+
+      .about-box-style-3 div a * {
+        transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+      }
+
+      .about-box-style-3 div a strong {
+        display: block;
+        line-height: 30px;
+        background: rgba(34, 34, 34, 0.6);
+        padding: 5px 0;
+        color: #fff;
+        font-size: 15px;
+        text-transform: capitalize;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        width: 100%;
+        font-family: "Open Sans", serif;
+      }
+
+      .about-box-style-3 div a:hover img {
+        transform: scale(0.95, 0.95);
+      }
+
+      .about-box-style-3 div a:hover strong {
+        bottom: 10%;
+        background: rgba(0, 179, 158, 0.8);
+      }
+    </style>
+  </head>
+  <body class="cms-page-view cms-help-cap-construction-types">
+    <div class="container main-container col2-left-layout" id="page">
+      <div class="row">
+        <div class="col-sm-9 col-lg-10 col-main">
+          <div class="cms-content">
+            <h3>CAP FEATURES</h3>
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" src="picture/wig_cap_types_1.jpg" />
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">100% HAND-TIED</h4>
+                100% Hand-tied wigs feature fibers that are hand-tied to the
+                cap, which allows you to brush the hair in any direction you
+                choose for the ultimate in styling versatility.Hand-tied wigs
+                are perfect for those looking for a comfortable fit and a
+                luxurious natural look that won&rsquo;t be mistaken for anything
+                but real hair. These high-end creations are also ideal for women
+                experiencing complete hair loss or scalp sensitivity.
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" src="picture/wig_cap_types_2.jpg" />
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">MONOFILAMENT</h4>
+                Monofilament wigs are made from a gauze-like, fine-grade nylon
+                material that is naturally transparent. Monofilament wigs employ
+                a different approach to cap construction and integration with
+                hair fibers. Unlike traditional wefts, monofilament fabric gives
+                you the ability to sew hair fibers into the wig cap one hair (or
+                a few hairs) at a time. This method of wig construction mimics
+                the way hair naturally grows out of a scalp.
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" src="picture/wig_cap_types_3.jpg" />
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">LACE FRONT</h4>
+                lace front wigs feature realistic temple-to-temple front
+                hairlines that give the appearance of naturally growing hair,
+                allowing for versatile off-the-face styling options. It has
+                human hair or synthetic fibers hand-tied to poly-silk mesh lace
+                at the front, creating a seamless, completely natural-looking
+                hairline.
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" src="picture/wig_cap_types_4.jpg" />
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">CAPLESS</h4>
+                Capless wigs are a specific design of wig that can be worn by
+                people with or without hair. You will find capless wigs used to
+                complement a costume, as a fashion accessory, to change up a
+                look or to mimic real hair after hair thinning or loss. Also it
+                features open wefting, which gives open cap wigs a lightweight,
+                well-ventilated, and comfortable fit and feel, this flexible
+                open cap design offers positive benefits to wig wearers.
+              </div>
+            </div>
+            <p>&nbsp;</p>
+            <div class="row about-box-style-3">
+              <div class="col-xs-6 col-sm-3">
+                <a href="#" target="_blank"
+                  ><strong>Monofilament</strong
+                  ><img
+                    class="img-responsive"
+                    alt="Monofilament"
+                    src="picture/wig_category_links_1.jpg"
+                /></a>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <a href="#" target="_blank"
+                  ><strong>Lace Front</strong
+                  ><img
+                    class="img-responsive"
+                    alt="Lace Front"
+                    src="picture/wig_category_links_2.jpg"
+                /></a>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <a href="#" target="_blank"
+                  ><strong>Capless</strong
+                  ><img
+                    class="img-responsive"
+                    alt="Capless"
+                    src="picture/wig_category_links_3.jpg"
+                /></a>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <a href="#" target="_blank"
+                  ><strong>Full Lace</strong
+                  ><img
+                    class="img-responsive"
+                    alt="Full Lace"
+                    src="picture/wig_category_links_4.jpg"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container content-end-box">
+      <a href="#page" class="mobile-scroll-up visible-xs-block text-center">
+        <span class="fa fa-angle-up"></span>
+        <br />Top Of Page
+      </a>
+      <div class="row footer-privacy"></div>
+    </div>
+  </body>
+</html>
